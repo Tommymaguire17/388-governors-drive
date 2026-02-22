@@ -833,6 +833,14 @@
             opacity: 0.4;
         }
 
+        .calendar-date.booked {
+            background-color: #f0d0d0;
+            color: #b44;
+            opacity: 0.7;
+            text-decoration: line-through;
+            cursor: not-allowed;
+        }
+
         .calendar-date.selected {
             background-color: var(--gold);
             color: var(--dark);
@@ -1804,7 +1812,7 @@
                     </div>
 
                     <div class="booking-summary">
-                        <div class="summary-item"><span>Nightly Rate:</span><span id="nightlyRate">$810</span></div>
+                        <div class="summary-item"><span>Avg Nightly Rate:</span><span id="nightlyRate">--</span></div>
                         <div class="summary-item"><span>Number of Nights:</span><span id="nightsCount">0</span></div>
                         <div class="summary-item"><span>Pool Heating:</span><span id="poolHeatingCost">$0</span></div>
                         <div class="summary-total"><span>Estimated Total:</span><span id="totalPrice">$0</span></div>
@@ -2145,6 +2153,32 @@
         var checkInDate = null;
         var checkOutDate = null;
 
+        // Active 2026 reservations (check-in to check-out)
+        var bookedDates = [
+            { start: '2026-03-19', end: '2026-03-22' },
+            { start: '2026-03-27', end: '2026-03-30' },
+            { start: '2026-04-04', end: '2026-04-09' },
+            { start: '2026-04-09', end: '2026-04-12' },
+            { start: '2026-05-11', end: '2026-05-14' },
+            { start: '2026-06-06', end: '2026-06-13' },
+            { start: '2026-06-13', end: '2026-06-20' },
+            { start: '2026-06-27', end: '2026-07-04' },
+            { start: '2026-07-05', end: '2026-07-12' },
+            { start: '2026-07-12', end: '2026-07-18' },
+            { start: '2026-09-04', end: '2026-09-07' },
+            { start: '2026-10-05', end: '2026-10-09' },
+            { start: '2026-10-09', end: '2026-10-12' }
+        ];
+
+        function isDateBooked(dateObj) {
+            for (var i = 0; i < bookedDates.length; i++) {
+                var start = new Date(bookedDates[i].start + 'T00:00:00');
+                var end = new Date(bookedDates[i].end + 'T00:00:00');
+                if (dateObj >= start && dateObj < end) return true;
+            }
+            return false;
+        }
+
         var monthNames = ['January','February','March','April','May','June',
             'July','August','September','October','November','December'];
 
@@ -2171,9 +2205,11 @@
             for (var day = 1; day <= daysInMonth; day++) {
                 var dateObj = new Date(year, month, day);
                 var cls = 'calendar-date';
+                var booked = isDateBooked(dateObj);
 
-                if (dateObj < today) {
+                if (dateObj < today || booked) {
                     cls += ' disabled';
+                    if (booked) cls += ' booked';
                 } else {
                     if (checkInDate && dateObj.toDateString() === checkInDate.toDateString()) cls += ' selected';
                     if (checkOutDate && dateObj.toDateString() === checkOutDate.toDateString()) cls += ' selected';
@@ -2230,14 +2266,55 @@
             generateCalendar();
         });
 
+        // Seasonal nightly rates from VRBO calendar
+        var seasonalRates = [
+            { start: '2026-01-01', end: '2026-01-14', rate: 425 },
+            { start: '2026-01-15', end: '2026-01-31', rate: 450 },
+            { start: '2026-02-01', end: '2026-03-07', rate: 475 },
+            { start: '2026-03-08', end: '2026-03-31', rate: 599 },
+            { start: '2026-04-01', end: '2026-04-04', rate: 675 },
+            { start: '2026-04-05', end: '2026-04-19', rate: 799 },
+            { start: '2026-04-20', end: '2026-05-07', rate: 650 },
+            { start: '2026-05-08', end: '2026-05-23', rate: 625 },
+            { start: '2026-05-24', end: '2026-05-28', rate: 650 },
+            { start: '2026-05-29', end: '2026-06-06', rate: 750 },
+            { start: '2026-06-07', end: '2026-06-19', rate: 875 },
+            { start: '2026-06-20', end: '2026-06-26', rate: 949 },
+            { start: '2026-06-27', end: '2026-07-18', rate: 999 },
+            { start: '2026-07-19', end: '2026-07-24', rate: 875 },
+            { start: '2026-07-25', end: '2026-07-31', rate: 915 },
+            { start: '2026-08-01', end: '2026-08-31', rate: 899 },
+            { start: '2026-09-01', end: '2026-12-31', rate: 575 }
+        ];
+
+        function getRateForDate(dateObj) {
+            var mm = String(dateObj.getMonth() + 1).padStart(2, '0');
+            var dd = String(dateObj.getDate()).padStart(2, '0');
+            var dateStr = dateObj.getFullYear() + '-' + mm + '-' + dd;
+            for (var i = 0; i < seasonalRates.length; i++) {
+                if (dateStr >= seasonalRates[i].start && dateStr <= seasonalRates[i].end) {
+                    return seasonalRates[i].rate;
+                }
+            }
+            return 575; // default off-season rate
+        }
+
         function updateBookingSummary() {
             var nights = checkOutDate ? Math.floor((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24)) : 0;
-            var nightlyRate = 810;
+            var roomTotal = 0;
+            if (nights > 0) {
+                var d = new Date(checkInDate.getTime());
+                for (var i = 0; i < nights; i++) {
+                    roomTotal += getRateForDate(d);
+                    d.setDate(d.getDate() + 1);
+                }
+            }
+            var avgRate = nights > 0 ? Math.round(roomTotal / nights) : 0;
             var poolAdd = document.getElementById('poolHeating').value === 'yes' ? 150 : 0;
             var poolTotal = poolAdd * nights;
-            var total = Math.round((nightlyRate * nights + poolTotal) * 1.05);
+            var total = Math.round((roomTotal + poolTotal) * 1.05);
 
-            document.getElementById('nightlyRate').textContent = '$' + nightlyRate;
+            document.getElementById('nightlyRate').textContent = nights > 0 ? '$' + avgRate + '/night' : '--';
             document.getElementById('nightsCount').textContent = nights + (nights === 1 ? ' night' : ' nights');
             document.getElementById('poolHeatingCost').textContent = poolTotal > 0 ? '$' + poolTotal : '$0';
             document.getElementById('totalPrice').textContent = nights > 0 ? '$' + total : '$0';
@@ -2256,13 +2333,21 @@
                 alert('Please select both check-in and check-out dates.');
                 return;
             }
+            var bkNights = Math.floor((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24));
+            var bkTotal = 0;
+            var d = new Date(checkInDate.getTime());
+            for (var i = 0; i < bkNights; i++) { bkTotal += getRateForDate(d); d.setDate(d.getDate() + 1); }
+            var bkPool = document.getElementById('poolHeating').value === 'yes' ? 150 * bkNights : 0;
+            var bkEst = Math.round((bkTotal + bkPool) * 1.05);
             var subject = 'Booking Inquiry - 388 Governors Drive';
             var body = 'Booking Inquiry\n\n' +
                 'Check-in: ' + document.getElementById('checkInDate').value + '\n' +
                 'Check-out: ' + document.getElementById('checkOutDate').value + '\n' +
+                'Nights: ' + bkNights + '\n' +
                 'Guests: ' + document.getElementById('guestCount').value + '\n' +
-                'Pool Heating: ' + document.getElementById('poolHeating').value + '\n\n' +
-                'Please contact me with pricing and availability.\n\nThank you!';
+                'Pool Heating: ' + document.getElementById('poolHeating').value + '\n' +
+                'Estimated Total: $' + bkEst + '\n\n' +
+                'Please contact me to confirm availability.\n\nThank you!';
             window.location.href = 'mailto:tmaguire6061@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         });
 
