@@ -1815,8 +1815,7 @@
                     </div>
 
                     <div class="booking-buttons">
-                        <button class="request-book-btn" id="requestBookBtn">Request to Book</button>
-                        <button class="payment-btn" id="payDepositBtn">Pay Deposit</button>
+                        <button class="request-book-btn" id="requestBookBtn" style="width:100%;">Request to Book</button>
                     </div>
                 </div>
             </div>
@@ -1959,19 +1958,6 @@
         </div>
     </footer>
 
-    <!-- Payment Modal -->
-    <div class="modal-overlay" id="paymentOverlay"></div>
-    <div class="modal" id="paymentModal">
-        <button class="modal-close" id="paymentClose" aria-label="Close">&times;</button>
-        <h3>Payment Processing</h3>
-        <p>Secure payment processing is being set up. For now, please contact us directly to arrange your deposit.</p>
-        <div style="text-align: left; background: var(--light-gray); padding: 1.25rem; border-radius: var(--radius-sm); margin: 1rem 0;">
-            <div style="margin-bottom: 0.75rem;"><strong>Phone:</strong> <a href="tel:+19176095115">(917) 609-5115</a></div>
-            <div><strong>Email:</strong> <a href="mailto:tmaguire6061@gmail.com">tmaguire6061@gmail.com</a></div>
-        </div>
-        <button class="cta-button" id="paymentModalClose" style="width: 100%;">Got It</button>
-        <div class="property-id">Property License: RBL-19-006918</div>
-    </div>
 
     <!-- Scroll to Top -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">&uarr;</button>
@@ -2279,29 +2265,6 @@
                 'Please contact me with pricing and availability.\n\nThank you!';
             window.location.href = 'mailto:tmaguire6061@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         });
-
-        // ========================
-        // PAYMENT MODAL
-        // ========================
-        var payOverlay = document.getElementById('paymentOverlay');
-        var payModal = document.getElementById('paymentModal');
-
-        function openPaymentModal() {
-            payOverlay.classList.add('active');
-            payModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closePaymentModal() {
-            payOverlay.classList.remove('active');
-            payModal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        document.getElementById('payDepositBtn').addEventListener('click', openPaymentModal);
-        payOverlay.addEventListener('click', closePaymentModal);
-        document.getElementById('paymentClose').addEventListener('click', closePaymentModal);
-        document.getElementById('paymentModalClose').addEventListener('click', closePaymentModal);
 
         // ========================
         // CONTACT FORM
