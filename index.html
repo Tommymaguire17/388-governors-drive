@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="388 Governors Drive - Luxury vacation rental on Kiawah Island, South Carolina. 4 bedrooms, private pool, sleeps 10. Book your perfect island getaway.">
+    <meta name="keywords" content="vacation rental, Kiawah Island, luxury property, pool, golf, South Carolina, beach house, resort">
+    <meta property="og:title" content="388 Governors Drive - Luxury Kiawah Island Vacation Rental">
+    <meta property="og:description" content="Experience luxury on Kiawah Island. Private pool, lagoon views, sleeps 10. 4 bedrooms, 4 bathrooms, resort amenities.">
+    <meta property="og:image" content="https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/5375b88f.jpg">
+    <meta property="og:url" content="https://388governorsdrive.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://388governorsdrive.com">
+    <title>388 Governors Drive | Luxury Kiawah Island Vacation Rental</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --cream: #F5F0E8;
+            --olive: #5C6B4F;
+            --olive-light: #7A8B6D;
+            --gold: #B8935A;
+            --gold-light: #D4B07A;
+            --dark: #2C2C2C;
+            --white: #FFFFFF;
+            --light-gray: #F9F7F3;
+            --text-light: #5C5C5C;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 6px 24px rgba(0,0,0,0.1);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.15);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+
+        a:hover {
+            color: var(--olive);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        /* ========================
+           NAVIGATION
+        ======================== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+            transition: box-shadow var(--transition);
+        }
+
+        nav.scrolled {
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            letter-spacing: 0.5px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.75rem;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: width var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--olive);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: var(--dark);
+            border-radius: 2px;
+            transition: all var(--transition);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ========================
+           HERO
+        ======================== */
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            background: linear-gradient(160deg, rgba(44, 44, 44, 0.35) 0%, rgba(92, 107, 79, 0.25) 100%),
+                        url('https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/5375b88f.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 68px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to top, var(--white), transparent);
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--white);
+            z-index: 2;
+            padding: 0 2rem;
+            animation: heroFade 1s ease forwards;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 1rem;
+            color: var(--white);
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            margin-bottom: 2.5rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 300;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .hero-stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.85;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--gold);
+            color: var(--dark);
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all var(--transition);
+            box-shadow: 0 4px 20px rgba(184, 147, 90, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: var(--olive);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(92, 107, 79, 0.4);
+        }
+
+        /* ========================
+           ANIMATIONS
+        ======================== */
+        @keyframes heroFade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========================
+           SECTIONS
+        ======================== */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--gold), var(--olive));
+            margin: 0 auto 1.5rem;
+            border-radius: 2px;
+        }
+
+        /* ========================
+           ABOUT
+        ======================== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--olive);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.25rem;
+            color: var(--text-light);
+            line-height: 1.85;
+            font-size: 0.95rem;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .about-highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            background: var(--light-gray);
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .about-highlight-item span:first-child {
+            font-size: 1.3rem;
+        }
+
+        .about-image-container {
+            position: relative;
+        }
+
+        .about-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-image-accent {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--gold), var(--olive));
+            border-radius: var(--radius-md);
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        /* ========================
+           GALLERY
+        ======================== */
+        .gallery-section {
+            background: var(--light-gray);
+            padding: 6rem 0;
+            max-width: 100%;
+        }
+
+        .gallery-section .gallery-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.25rem;
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay-text {
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lightbox-image {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: var(--radius-sm);
+        }
+
+        .lightbox-caption {
+            color: var(--white);
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .lightbox-counter {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            opacity: 0.8;
+            transition: opacity var(--transition);
+        }
+
+        .lightbox-close:hover { opacity: 1; }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+            color: var(--white);
+            border: none;
+            font-size: 1.5rem;
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+            transition: background-color var(--transition);
+        }
+
+        .lightbox-nav:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+
+        /* ========================
+           ROOMS
+        ======================== */
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .room-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.04);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .room-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .room-card h3 {
+            color: var(--olive);
+            margin-bottom: 1.25rem;
+            font-size: 1.5rem;
+        }
+
+        .room-detail {
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .room-detail span:first-child {
+            font-size: 1.2rem;
+            width: 28px;
+            text-align: center;
+        }
+
+        /* ========================
+           AMENITIES
+        ======================== */
+        .amenities-section {
+            background: var(--light-gray);
+            padding: 6rem 0;
+            max-width: 100%;
+        }
+
+        .amenities-section .amenities-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .amenity-item {
+            text-align: center;
+            padding: 1.75rem 1rem;
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            transition: transform var(--transition), box-shadow var(--transition);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .amenity-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .amenity-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .amenity-item p {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* ========================
+           LOCATION
+        ======================== */
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .location-text h3 {
+            color: var(--olive);
+            margin-bottom: 1.5rem;
+        }
+
+        .location-text p {
+            margin-bottom: 1.25rem;
+            color: var(--text-light);
+            line-height: 1.85;
+            font-size: 0.95rem;
+        }
+
+        .location-features {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .location-feature {
+            display: flex;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--light-gray);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--gold);
+        }
+
+        .location-feature-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .location-feature-text strong {
+            display: block;
+            color: var(--dark);
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .location-feature-text span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .location-map {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+
+        /* ========================
+           BOOKING
+        ======================== */
+        .booking-container {
+            background-color: var(--light-gray);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+        }
+
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .calendar-container {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .calendar-header h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .cal-nav-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .calendar-nav-btn {
+            background-color: var(--gold);
+            color: var(--dark);
+            border: none;
+            padding: 0.5rem 0.9rem;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all var(--transition);
+        }
+
+        .calendar-nav-btn:hover {
+            background-color: var(--olive);
+            color: var(--white);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+        }
+
+        .calendar-weekday {
+            text-align: center;
+            font-weight: 600;
+            color: var(--olive);
+            padding: 0.6rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .calendar-date {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            background-color: var(--light-gray);
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+            font-weight: 500;
+        }
+
+        .calendar-date:hover:not(.disabled) {
+            border-color: var(--gold);
+            background-color: var(--cream);
+        }
+
+        .calendar-date.disabled {
+            color: #ccc;
+            cursor: not-allowed;
+            opacity: 0.4;
+        }
+
+        .calendar-date.selected {
+            background-color: var(--gold);
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .calendar-date.in-range {
+            background-color: var(--cream);
+            color: var(--dark);
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .booking-form h3 {
+            color: var(--olive);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 0.75rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: var(--radius-sm);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color var(--transition), box-shadow var(--transition);
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(184, 147, 90, 0.15);
+        }
+
+        .booking-summary {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--gold);
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--dark);
+            border-top: 2px solid var(--cream);
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        .booking-note {
+            background-color: var(--cream);
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .booking-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .request-book-btn {
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--gold);
+            color: var(--dark);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all var(--transition);
+        }
+
+        .request-book-btn:hover {
+            background-color: var(--olive);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .payment-btn {
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--olive);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all var(--transition);
+        }
+
+        .payment-btn:hover {
+            background-color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ========================
+           CONTACT
+        ======================== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            padding: 2.5rem;
+            background: linear-gradient(135deg, var(--olive), var(--olive-light));
+            border-radius: var(--radius-lg);
+            color: var(--white);
+        }
+
+        .contact-info h3 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .contact-detail-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-text a {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .contact-detail-text a:hover {
+            color: var(--gold-light);
+        }
+
+        .contact-detail-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+
+        .contact-form-container {
+            background-color: var(--light-gray);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+        }
+
+        .contact-form-container h3 {
+            color: var(--olive);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-container > p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: var(--radius-sm);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            transition: border-color var(--transition), box-shadow var(--transition);
+            background: var(--white);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(184, 147, 90, 0.15);
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--gold);
+            color: var(--dark);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .submit-btn:hover {
+            background-color: var(--olive);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        .form-success-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* ========================
+           REVIEWS
+        ======================== */
+        .reviews-container {
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--cream) 100%);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+        }
+
+        .rating-display {
+            margin-bottom: 2rem;
+        }
+
+        .stars {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            letter-spacing: 4px;
+        }
+
+        .rating-text {
+            font-size: 1.5rem;
+            color: var(--dark);
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .review-count {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .reviews-scroll {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 1rem 0;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .reviews-scroll::-webkit-scrollbar { display: none; }
+
+        .review-card {
+            flex: 0 0 min(400px, 85vw);
+            scroll-snap-align: start;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--gold);
+            text-align: left;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .review-stars {
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+
+        .review-quote {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .review-author {
+            color: var(--olive);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .vrbo-link {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.9rem 2rem;
+            background-color: var(--gold);
+            color: var(--dark);
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all var(--transition);
+        }
+
+        .vrbo-link:hover {
+            background-color: var(--olive);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* ========================
+           FOOTER
+        ======================== */
+        footer {
+            background-color: var(--dark);
+            color: var(--cream);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            color: rgba(245, 240, 232, 0.7);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-top: 1rem;
+        }
+
+        .footer-section h4 {
+            color: var(--gold);
+            margin-bottom: 1.25rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(245, 240, 232, 0.7);
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(184, 147, 90, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(245, 240, 232, 0.4);
+            font-size: 0.8rem;
+        }
+
+        /* ========================
+           SCROLL TO TOP
+        ======================== */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background-color: var(--gold);
+            color: var(--dark);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            z-index: 999;
+            transition: all var(--transition);
+            box-shadow: var(--shadow-md);
+        }
+
+        .scroll-to-top.show { display: flex; }
+
+        .scroll-to-top:hover {
+            background-color: var(--olive);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* ========================
+           PAYMENT MODAL
+        ======================== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1999;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-overlay.active { display: block; }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            z-index: 2000;
+            max-width: 480px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .modal.active { display: block; }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--light-gray);
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--dark);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background var(--transition);
+        }
+
+        .modal-close:hover { background: var(--cream); }
+
+        .modal h3 {
+            color: var(--olive);
+            margin-bottom: 1rem;
+        }
+
+        .modal p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .property-id {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-top: 1.5rem;
+            opacity: 0.7;
+        }
+
+        /* ========================
+           RESPONSIVE
+        ======================== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background-color: var(--white);
+                padding: 1.5rem 2rem;
+                gap: 0.75rem;
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav-links.active { display: flex; }
+            .hamburger { display: flex; }
+
+            .hero {
+                height: 80vh;
+                min-height: 500px;
+                margin-top: 68px;
+            }
+
+            .hero-stats { gap: 1.5rem; }
+
+            section { padding: 4rem 1.5rem; }
+            .gallery-section, .amenities-section { padding: 4rem 0; }
+
+            .about-grid,
+            .location-content,
+            .booking-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-highlights { grid-template-columns: 1fr; }
+
+            .booking-grid { gap: 2rem; }
+            .booking-buttons { flex-direction: column; }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .rooms-grid { grid-template-columns: 1fr; }
+
+            .location-map iframe { height: 300px; }
+
+            .form-row { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            section { padding: 3rem 1rem; }
+
+            .gallery-grid { grid-template-columns: 1fr; }
+
+            .cta-button {
+                padding: 0.9rem 2rem;
+                font-size: 0.9rem;
+            }
+
+            .lightbox-nav {
+                padding: 0.75rem 1rem;
+                font-size: 1.3rem;
+            }
+
+            .contact-form-container,
+            .contact-info { padding: 2rem 1.5rem; }
+
+            .booking-container { padding: 2rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <div class="nav-container">
+            <div class="logo">388 <span>Governors</span> Drive</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Kiawah Island, South Carolina</div>
+            <h1>388 Governors Drive</h1>
+            <p>Luxury Island Retreat with Private Pool &amp; Lagoon Views</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-value">4</span>
+                    <span class="hero-stat-label">Bedrooms</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">4</span>
+                    <span class="hero-stat-label">Bathrooms</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">10</span>
+                    <span class="hero-stat-label">Guests</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-value">4,025</span>
+                    <span class="hero-stat-label">Sq Ft</span>
+                </div>
+            </div>
+            <a href="#booking" class="cta-button">Book Your Stay</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-divider"></div>
+        <h2>About This Property</h2>
+        <p class="section-subtitle">A custom-built masterpiece offering the perfect blend of sophisticated design and island comfort on Kiawah Island.</p>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <h3>Exceptional Island Living</h3>
+                <p>Welcome to 388 Governors Drive, an exquisite luxury vacation rental nestled in the heart of Kiawah Island. This stunning 4,025 sq ft home features a distinctive mahogany door with cut glass arch that welcomes you into breathtaking sight lines to the deck, pool, and serene lagoon.</p>
+
+                <p>The spacious living room showcases beautiful hardwood flooring, a gas fireplace, and tray ceiling with Anderson wood accent doors. The chef's kitchen is a culinary dream with granite countertops, ceramic beadboard backsplash, cherry and glass-front cabinetry, and a high-end Thermador gas range.</p>
+
+                <p>The sunroom is a year-round retreat with vaulted stained plank ceilings, skylights, and oversized windows offering stunning views. Relax by the private saltwater in-deck pool with lagoon vistas, or explore the beautiful natural lot with mature oaks, magnolias, cedar, and palm trees.</p>
+
+                <div class="about-highlights">
+                    <div class="about-highlight-item"><span>🏊</span> <span>Saltwater Pool</span></div>
+                    <div class="about-highlight-item"><span>🏌️</span> <span>5 Golf Courses</span></div>
+                    <div class="about-highlight-item"><span>🏖️</span> <span>Near Beach</span></div>
+                    <div class="about-highlight-item"><span>🍳</span> <span>Chef's Kitchen</span></div>
+                </div>
+            </div>
+            <div class="about-image-container reveal">
+                <div class="about-image">
+                    <img src="https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/a926815e.jpg" alt="Rear view of 388 Governors Drive showing pool and deck area with lagoon views" loading="lazy">
+                </div>
+                <div class="about-image-accent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <div class="gallery-section" id="gallery">
+        <div class="gallery-inner">
+            <div class="section-divider"></div>
+            <h2>Photo Gallery</h2>
+            <p class="section-subtitle">Take a tour of this stunning property and its surroundings.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-image="https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/5375b88f.jpg" data-title="Private Pool &amp; Lagoon View">
+                    <img src="https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/5375b88f.jpg" alt="Private saltwater pool overlooking the lagoon" loading="lazy">
+                    <div class="gallery-overlay"><span class="gallery-overlay-text">Private Pool &amp; Lagoon</span></div>
+                </div>
+                <div class="gallery-item" data-image="https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/a926815e.jpg" data-title="Rear Exterior">
+                    <img src="https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/a926815e.jpg" alt="Rear exterior of the home showing deck and pool" loading="lazy">
+                    <div class="gallery-overlay"><span class="gallery-overlay-text">Rear Exterior</span></div>
+                </div>
+                <div class="gallery-item" data-image="https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/w2573h1728x0y0-2c6a912b.jpg" data-title="Terrace &amp; Patio">
+                    <img src="https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/w2573h1728x0y0-2c6a912b.jpg" alt="Spacious terrace and patio area for outdoor dining" loading="lazy">
+                    <div class="gallery-overlay"><span class="gallery-overlay-text">Terrace &amp; Patio</span></div>
+                </div>
+                <div class="gallery-item" data-image="https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/f3929643.jpg" data-title="Living Room">
+                    <img src="https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/f3929643.jpg" alt="Elegant living room with hardwood floors and gas fireplace" loading="lazy">
+                    <div class="gallery-overlay"><span class="gallery-overlay-text">Living Room</span></div>
+                </div>
+                <div class="gallery-item" data-image="https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/09914ea5.jpg" data-title="Family Room">
+                    <img src="https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/09914ea5.jpg" alt="Comfortable family room with ample seating" loading="lazy">
+                    <div class="gallery-overlay"><span class="gallery-overlay-text">Family Room</span></div>
+                </div>
+                <div class="gallery-item" data-image="https://media.vrbo.com/lodging/59000000/58990000/58987700/58987691/2ac1cce2.jpg" data-title="Pool Area">
+                    <img src="https://media.vrbo.com/lodging/59000000/58990000/58987700/58987691/2ac1cce2.jpg" alt="Close-up of the private saltwater pool" loading="lazy">
+                    <div class="gallery-overlay"><span class="gallery-overlay-text">Pool Area</span></div>
+                </div>
+                <div class="gallery-item" data-image="https://media.vrbo.com/lodging/73000000/72620000/72618900/72618891/1a64f8f8.jpg" data-title="Chef's Kitchen">
+                    <img src="https://media.vrbo.com/lodging/73000000/72620000/72618900/72618891/1a64f8f8.jpg" alt="Gourmet kitchen with granite countertops and cherry cabinetry" loading="lazy">
+                    <div class="gallery-overlay"><span class="gallery-overlay-text">Chef's Kitchen</span></div>
+                </div>
+                <div class="gallery-item" data-image="https://media.vrbo.com/lodging/67000000/66930000/66922000/66921997/7b41cd28.jpg" data-title="Den">
+                    <img src="https://media.vrbo.com/lodging/67000000/66930000/66922000/66921997/7b41cd28.jpg" alt="Cozy den off the kitchen" loading="lazy">
+                    <div class="gallery-overlay"><span class="gallery-overlay-text">Den</span></div>
+                </div>
+                <div class="gallery-item" data-image="https://media.vrbo.com/lodging/115000000/114750000/114744700/114744613/fffc4685.jpg" data-title="Bedroom">
+                    <img src="https://media.vrbo.com/lodging/115000000/114750000/114744700/114744613/fffc4685.jpg" alt="Spacious king bedroom with premium bedding" loading="lazy">
+                    <div class="gallery-overlay"><span class="gallery-overlay-text">Bedroom</span></div>
+                </div>
+                <div class="gallery-item" data-image="https://media.vrbo.com/lodging/73000000/72620000/72619200/72619127/c9f04221.jpg" data-title="Bathroom">
+                    <img src="https://media.vrbo.com/lodging/73000000/72620000/72619200/72619127/c9f04221.jpg" alt="Modern bathroom with updated fixtures" loading="lazy">
+                    <div class="gallery-overlay"><span class="gallery-overlay-text">Bathroom</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rooms Section -->
+    <section id="rooms">
+        <div class="section-divider"></div>
+        <h2>Bedrooms &amp; Bathrooms</h2>
+        <p class="section-subtitle">Four beautifully appointed bedrooms and bathrooms to accommodate up to 10 guests.</p>
+        <div class="rooms-grid">
+            <div class="room-card reveal">
+                <h3>Master Bedroom 1</h3>
+                <div class="room-detail"><span>🛏️</span><span>King Bed</span></div>
+                <div class="room-detail"><span>🚿</span><span>Ensuite Bathroom with Shower</span></div>
+                <div class="room-detail"><span>🌅</span><span>Lagoon Views</span></div>
+            </div>
+            <div class="room-card reveal">
+                <h3>Master Bedroom 2</h3>
+                <div class="room-detail"><span>🛏️</span><span>King Bed</span></div>
+                <div class="room-detail"><span>🚿</span><span>Ensuite Bathroom with Shower</span></div>
+                <div class="room-detail"><span>✨</span><span>Premium Accommodations</span></div>
+            </div>
+            <div class="room-card reveal">
+                <h3>Master Bedroom 3</h3>
+                <div class="room-detail"><span>🛏️</span><span>King Bed</span></div>
+                <div class="room-detail"><span>🚿</span><span>Ensuite Bathroom with Shower</span></div>
+                <div class="room-detail"><span>🏖️</span><span>Comfortable &amp; Spacious</span></div>
+            </div>
+            <div class="room-card reveal">
+                <h3>FROG (Bonus Room)</h3>
+                <div class="room-detail"><span>🛏️</span><span>King Bed + 2 Twin Beds</span></div>
+                <div class="room-detail"><span>👨‍👩‍👧‍👦</span><span>Perfect for Families</span></div>
+                <div class="room-detail"><span>🎮</span><span>Recreation &amp; Relaxation</span></div>
+            </div>
+            <div class="room-card reveal">
+                <h3>Bathroom Details</h3>
+                <div class="room-detail"><span>🚿</span><span>4 Full Bathrooms</span></div>
+                <div class="room-detail"><span>✨</span><span>All with Showers</span></div>
+                <div class="room-detail"><span>🧺</span><span>Freshly Re-tiled Laundry Room</span></div>
+            </div>
+            <div class="room-card reveal">
+                <h3>Total Capacity</h3>
+                <div class="room-detail"><span>👥</span><span>Sleeps 10 Guests</span></div>
+                <div class="room-detail"><span>📐</span><span>4,025 Square Feet</span></div>
+                <div class="room-detail"><span>🏡</span><span>Luxury Living Space</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <div class="amenities-section" id="amenities">
+        <div class="amenities-inner">
+            <div class="section-divider"></div>
+            <h2>Amenities</h2>
+            <p class="section-subtitle">Everything you need for the perfect island getaway.</p>
+            <div class="amenities-grid">
+                <div class="amenity-item reveal"><div class="amenity-icon">🏊</div><p>Private Saltwater Pool</p></div>
+                <div class="amenity-item reveal"><div class="amenity-icon">📶</div><p>High-Speed WiFi</p></div>
+                <div class="amenity-item reveal"><div class="amenity-icon">❄️</div><p>Air Conditioning</p></div>
+                <div class="amenity-item reveal"><div class="amenity-icon">👨‍🍳</div><p>Full Kitchen</p></div>
+                <div class="amenity-item reveal"><div class="amenity-icon">🧺</div><p>Washer &amp; Dryer</p></div>
+                <div class="amenity-item reveal"><div class="amenity-icon">🪑</div><p>Deck &amp; Patio</p></div>
+                <div class="amenity-item reveal"><div class="amenity-icon">🌿</div><p>Landscaped Garden</p></div>
+                <div class="amenity-item reveal"><div class="amenity-icon">🔥</div><p>Gas Fireplace</p></div>
+                <div class="amenity-item reveal"><div class="amenity-icon">🍽️</div><p>Dining Area</p></div>
+                <div class="amenity-item reveal"><div class="amenity-icon">🚗</div><p>Driveway Parking</p></div>
+                <div class="amenity-item reveal"><div class="amenity-icon">🛁</div><p>Bath Amenities</p></div>
+                <div class="amenity-item reveal"><div class="amenity-icon">🏌️</div><p>Golf Course Access</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Location Section -->
+    <section id="location">
+        <div class="section-divider"></div>
+        <h2>Location &amp; Surroundings</h2>
+        <p class="section-subtitle">Situated on prestigious Kiawah Island, one of the most sought-after coastal destinations in the Southeast.</p>
+        <div class="location-content">
+            <div class="location-text reveal">
+                <h3>Kiawah Island Paradise</h3>
+                <p>388 Governors Drive is located in a gated community renowned for luxury properties, pristine golf courses, and exclusive beach access. The island offers the perfect blend of resort living and natural tranquility.</p>
+
+                <div class="location-features">
+                    <div class="location-feature">
+                        <div class="location-feature-icon">🏖️</div>
+                        <div class="location-feature-text">
+                            <strong>Beach Access</strong>
+                            <span>8 min by bike, 1-2 min by car to sandy beaches</span>
+                        </div>
+                    </div>
+                    <div class="location-feature">
+                        <div class="location-feature-icon">🏌️</div>
+                        <div class="location-feature-text">
+                            <strong>World-Class Golf</strong>
+                            <span>5 resort courses: Ocean Club, Cassique, Oak Point, Cougar Point, Turtle Point</span>
+                        </div>
+                    </div>
+                    <div class="location-feature">
+                        <div class="location-feature-icon">🎾</div>
+                        <div class="location-feature-text">
+                            <strong>Tennis &amp; Recreation</strong>
+                            <span>Resort tennis, nature trails, and exclusive amenities</span>
+                        </div>
+                    </div>
+                    <div class="location-feature">
+                        <div class="location-feature-icon">🍽️</div>
+                        <div class="location-feature-text">
+                            <strong>Dining &amp; Shopping</strong>
+                            <span>Upscale restaurants, boutique shops, resort services</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="location-map reveal">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53374.58128583724!2d-80.11546!3d32.60858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fe0eab4e89e455%3A0x4e1e9d4b47b82b0b!2sKiawah+Island%2C+SC!5e0!3m2!1sen!2sus!4v1700000000000" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map showing Kiawah Island, South Carolina"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking">
+        <div class="section-divider"></div>
+        <h2>Plan Your Stay</h2>
+        <p class="section-subtitle">Select your dates and get an instant price estimate.</p>
+        <div class="booking-container">
+            <div class="booking-grid">
+                <div class="calendar-container reveal">
+                    <div class="calendar-header">
+                        <h4 id="calendarMonth">Select Dates</h4>
+                        <div class="cal-nav-group">
+                            <button class="calendar-nav-btn" id="prevMonth" aria-label="Previous month">&larr;</button>
+                            <button class="calendar-nav-btn" id="nextMonth" aria-label="Next month">&rarr;</button>
+                        </div>
+                    </div>
+                    <div class="calendar-grid" id="calendar"></div>
+                </div>
+
+                <div class="booking-form reveal">
+                    <h3>Booking Details</h3>
+
+                    <div class="form-group">
+                        <label for="checkInDate">Check-in Date</label>
+                        <input type="text" id="checkInDate" placeholder="Select from calendar" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkOutDate">Check-out Date</label>
+                        <input type="text" id="checkOutDate" placeholder="Select from calendar" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guestCount">Number of Guests</label>
+                        <select id="guestCount">
+                            <option value="1">1 Guest</option>
+                            <option value="2" selected>2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7 Guests</option>
+                            <option value="8">8 Guests</option>
+                            <option value="9">9 Guests</option>
+                            <option value="10">10 Guests</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="poolHeating">Add Pool Heating?</label>
+                        <select id="poolHeating">
+                            <option value="no">No</option>
+                            <option value="yes">Yes (+$150/night)</option>
+                        </select>
+                    </div>
+
+                    <div class="booking-summary">
+                        <div class="summary-item"><span>Nightly Rate:</span><span id="nightlyRate">$350</span></div>
+                        <div class="summary-item"><span>Number of Nights:</span><span id="nightsCount">0</span></div>
+                        <div class="summary-item"><span>Pool Heating:</span><span id="poolHeatingCost">$0</span></div>
+                        <div class="summary-total"><span>Estimated Total:</span><span id="totalPrice">$0</span></div>
+                    </div>
+
+                    <div class="booking-note">
+                        <strong>Payment Options:</strong> Credit card payments up to $750. Payments over $750 incur a 3% surcharge. Zelle also accepted. Prices include service fees and taxes.
+                    </div>
+
+                    <div class="booking-buttons">
+                        <button class="request-book-btn" id="requestBookBtn">Request to Book</button>
+                        <button class="payment-btn" id="payDepositBtn">Pay Deposit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-divider"></div>
+        <h2>Get in Touch</h2>
+        <p class="section-subtitle">Have questions? We'd love to hear from you.</p>
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3>Contact Information</h3>
+                <p>Whether you have questions about the property, availability, or want to plan your perfect Kiawah Island vacation, we're here to help.</p>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">📍</div>
+                    <div class="contact-detail-text">
+                        <span class="contact-detail-label">Address</span>
+                        <span>388 Governors Drive, Kiawah Island, SC 29455</span>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">📞</div>
+                    <div class="contact-detail-text">
+                        <span class="contact-detail-label">Phone</span>
+                        <a href="tel:+19176095115">(917) 609-5115</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">✉️</div>
+                    <div class="contact-detail-text">
+                        <span class="contact-detail-label">Email</span>
+                        <a href="mailto:tommy@usawholesalesupplies.com">tommy@usawholesalesupplies.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">🏷️</div>
+                    <div class="contact-detail-text">
+                        <span class="contact-detail-label">VRBO Listing</span>
+                        <a href="https://www.vrbo.com/842556" target="_blank" rel="noopener">View on VRBO</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container reveal">
+                <h3>Send an Inquiry</h3>
+                <p>Fill out the form and we'll get back to you within 24 hours.</p>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <input type="text" class="form-input" id="firstName" placeholder="First Name" required style="margin-bottom:0">
+                        <input type="text" class="form-input" id="lastName" placeholder="Last Name" required style="margin-bottom:0">
+                    </div>
+                    <input type="email" class="form-input" id="email" placeholder="Email Address" required>
+                    <input type="tel" class="form-input" id="phone" placeholder="Phone Number" required>
+                    <div class="form-row">
+                        <input type="date" class="form-input" id="inquiryCheckIn" style="margin-bottom:0" aria-label="Check-in date">
+                        <input type="date" class="form-input" id="inquiryCheckOut" style="margin-bottom:0" aria-label="Check-out date">
+                    </div>
+                    <input type="number" class="form-input" id="inquiryGuests" placeholder="Number of Guests" min="1" max="10">
+                    <textarea class="form-input" id="message" placeholder="Your message or special requests..." required></textarea>
+                    <button type="submit" class="submit-btn">Send Inquiry</button>
+                </form>
+                <div class="form-success" id="formSuccess">
+                    <div class="form-success-icon">✅</div>
+                    <h3>Inquiry Sent!</h3>
+                    <p style="color: var(--text-light); margin-top: 0.5rem;">Your email client should open with the inquiry details. If it doesn't, please email us directly at <a href="mailto:tommy@usawholesalesupplies.com">tommy@usawholesalesupplies.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <div class="section-divider"></div>
+        <h2>Guest Reviews</h2>
+        <p class="section-subtitle">See what our guests have to say about their stay.</p>
+        <div class="reviews-container reveal">
+            <div class="rating-display">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <div class="rating-text">10 / 10</div>
+                <div class="review-count">Based on 102 verified reviews on VRBO</div>
+            </div>
+
+            <div class="reviews-scroll">
+                <div class="review-card">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="review-quote">"This property is absolutely stunning! From the moment we arrived, we felt pampered. The pool was perfect, the views are breathtaking, and the home has everything you could possibly need."</div>
+                    <div class="review-author">&mdash; Shannon H.</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="review-quote">"We will definitely be returning for another vacation. The kitchen was fully stocked, the beds were incredibly comfortable, and the location is unbeatable. Highly recommended!"</div>
+                    <div class="review-author">&mdash; Verified Guest</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="review-quote">"A true luxury retreat. The saltwater pool overlooking the lagoon was the highlight of our trip. The whole family loved it and we can't wait to come back."</div>
+                    <div class="review-author">&mdash; Verified Guest</div>
+                </div>
+            </div>
+
+            <a href="https://www.vrbo.com/842556" class="vrbo-link" target="_blank" rel="noopener">Read All Reviews on VRBO</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo" style="font-size: 1.3rem; margin-bottom: 0.25rem;">388 <span style="color: var(--gold);">Governors</span> Drive</div>
+                <p>A luxury vacation rental on Kiawah Island, South Carolina. Private saltwater pool, lagoon views, 5 world-class golf courses, and pristine beaches just minutes away.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Property</h4>
+                <p>4 Bedrooms &middot; 4 Bathrooms</p>
+                <p>Sleeps 10 Guests</p>
+                <p>4,025 Square Feet</p>
+                <a href="https://www.vrbo.com/842556" target="_blank" rel="noopener">View on VRBO</a>
+                <p style="margin-top: 0.75rem; font-size: 0.8rem; opacity: 0.5;">License: RBL-19-006918</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <a href="tel:+19176095115">(917) 609-5115</a>
+                <a href="mailto:tommy@usawholesalesupplies.com">tommy@usawholesalesupplies.com</a>
+                <p style="margin-top: 0.75rem;"><a href="#gallery">Gallery</a></p>
+                <a href="#booking">Reservations</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 388 Governors Drive, Kiawah Island. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div class="modal-overlay" id="paymentOverlay"></div>
+    <div class="modal" id="paymentModal">
+        <button class="modal-close" id="paymentClose" aria-label="Close">&times;</button>
+        <h3>Payment Processing</h3>
+        <p>Secure payment processing is being set up. For now, please contact us directly to arrange your deposit.</p>
+        <div style="text-align: left; background: var(--light-gray); padding: 1.25rem; border-radius: var(--radius-sm); margin: 1rem 0;">
+            <div style="margin-bottom: 0.75rem;"><strong>Phone:</strong> <a href="tel:+19176095115">(917) 609-5115</a></div>
+            <div><strong>Email:</strong> <a href="mailto:tommy@usawholesalesupplies.com">tommy@usawholesalesupplies.com</a></div>
+        </div>
+        <button class="cta-button" id="paymentModalClose" style="width: 100%;">Got It</button>
+        <div class="property-id">Property License: RBL-19-006918</div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">&uarr;</button>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "LodgingBusiness",
+        "name": "388 Governors Drive",
+        "image": "https://media.vrbo.com/lodging/34000000/33500000/33498500/33498451/5375b88f.jpg",
+        "description": "Luxury 4-bedroom vacation rental on Kiawah Island with private saltwater pool and lagoon views. Sleeps 10, 4,025 sq ft.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "388 Governors Drive",
+            "addressLocality": "Kiawah Island",
+            "addressRegion": "SC",
+            "postalCode": "29455",
+            "addressCountry": "US"
+        },
+        "telephone": "+19176095115",
+        "email": "tommy@usawholesalesupplies.com",
+        "priceRange": "$$$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "10",
+            "bestRating": "10",
+            "ratingCount": "102"
+        },
+        "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Private Saltwater Pool"},
+            {"@type": "LocationFeatureSpecification", "name": "WiFi"},
+            {"@type": "LocationFeatureSpecification", "name": "Full Kitchen"},
+            {"@type": "LocationFeatureSpecification", "name": "Washer/Dryer"},
+            {"@type": "LocationFeatureSpecification", "name": "Air Conditioning"},
+            {"@type": "LocationFeatureSpecification", "name": "Gas Fireplace"},
+            {"@type": "LocationFeatureSpecification", "name": "Golf Course Access"}
+        ],
+        "numberOfRooms": 4,
+        "petsAllowed": false,
+        "url": "https://388governorsdrive.com"
+    }
+    </script>
+
+    <script>
+    (function() {
+        'use strict';
+
+        // ========================
+        // NAVIGATION
+        // ========================
+        var nav = document.getElementById('mainNav');
+        var hamburger = document.getElementById('hamburger');
+        var navLinks = document.getElementById('navLinks');
+
+        // Scroll shadow on nav
+        window.addEventListener('scroll', function() {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        }, { passive: true });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        });
+
+        // Hamburger toggle
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile nav when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('nav') && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+
+        // ========================
+        // SCROLL TO TOP
+        // ========================
+        var scrollBtn = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.classList.toggle('show', window.pageYOffset > 400);
+        }, { passive: true });
+
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ========================
+        // SCROLL REVEAL
+        // ========================
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(function(el) {
+            revealObserver.observe(el);
+        });
+
+        // ========================
+        // GALLERY LIGHTBOX
+        // ========================
+        var currentImageIndex = 0;
+        var galleryItems = document.querySelectorAll('.gallery-item');
+
+        galleryItems.forEach(function(item, index) {
+            item.addEventListener('click', function() {
+                currentImageIndex = index;
+                openLightbox(this.dataset.image, this.dataset.title);
+            });
+        });
+
+        function openLightbox(imageSrc, title) {
+            closeLightbox();
+            var lightbox = document.createElement('div');
+            lightbox.className = 'lightbox active';
+            lightbox.id = 'gallery-lightbox';
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === this) closeLightbox();
+            });
+
+            lightbox.innerHTML =
+                '<div class="lightbox-content">' +
+                    '<button class="lightbox-close" aria-label="Close gallery">&times;</button>' +
+                    '<img src="' + imageSrc + '" alt="' + title + '" class="lightbox-image">' +
+                    '<div class="lightbox-caption">' + title + '</div>' +
+                    '<div class="lightbox-counter">' + (currentImageIndex + 1) + ' / ' + galleryItems.length + '</div>' +
+                    '<button class="lightbox-nav lightbox-prev" aria-label="Previous image">&#10094;</button>' +
+                    '<button class="lightbox-nav lightbox-next" aria-label="Next image">&#10095;</button>' +
+                '</div>';
+
+            document.body.appendChild(lightbox);
+            document.body.style.overflow = 'hidden';
+
+            lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+            lightbox.querySelector('.lightbox-prev').addEventListener('click', prevImage);
+            lightbox.querySelector('.lightbox-next').addEventListener('click', nextImage);
+        }
+
+        function closeLightbox() {
+            var lb = document.getElementById('gallery-lightbox');
+            if (lb) lb.remove();
+            document.body.style.overflow = '';
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + galleryItems.length) % galleryItems.length;
+            var item = galleryItems[currentImageIndex];
+            openLightbox(item.dataset.image, item.dataset.title);
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % galleryItems.length;
+            var item = galleryItems[currentImageIndex];
+            openLightbox(item.dataset.image, item.dataset.title);
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (!document.getElementById('gallery-lightbox')) return;
+            if (e.key === 'ArrowLeft') prevImage();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // ========================
+        // CALENDAR
+        // ========================
+        var calDate = new Date();
+        var checkInDate = null;
+        var checkOutDate = null;
+
+        var monthNames = ['January','February','March','April','May','June',
+            'July','August','September','October','November','December'];
+
+        function generateCalendar() {
+            var year = calDate.getFullYear();
+            var month = calDate.getMonth();
+            document.getElementById('calendarMonth').textContent = monthNames[month] + ' ' + year;
+
+            var firstDay = new Date(year, month, 1);
+            var daysInMonth = new Date(year, month + 1, 0).getDate();
+            var startDay = firstDay.getDay();
+            var today = new Date();
+            today.setHours(0,0,0,0);
+
+            var html = '';
+            ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].forEach(function(d) {
+                html += '<div class="calendar-weekday">' + d + '</div>';
+            });
+
+            for (var i = 0; i < startDay; i++) {
+                html += '<div class="calendar-date disabled"></div>';
+            }
+
+            for (var day = 1; day <= daysInMonth; day++) {
+                var dateObj = new Date(year, month, day);
+                var cls = 'calendar-date';
+
+                if (dateObj < today) {
+                    cls += ' disabled';
+                } else {
+                    if (checkInDate && dateObj.toDateString() === checkInDate.toDateString()) cls += ' selected';
+                    if (checkOutDate && dateObj.toDateString() === checkOutDate.toDateString()) cls += ' selected';
+                    if (checkInDate && checkOutDate && dateObj > checkInDate && dateObj < checkOutDate) cls += ' in-range';
+                }
+
+                html += '<div class="' + cls + '" data-day="' + day + '">' + day + '</div>';
+            }
+
+            document.getElementById('calendar').innerHTML = html;
+
+            document.querySelectorAll('.calendar-date:not(.disabled)').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    selectDate(parseInt(this.dataset.day));
+                });
+            });
+        }
+
+        function selectDate(day) {
+            var selected = new Date(calDate.getFullYear(), calDate.getMonth(), day);
+
+            if (!checkInDate || (checkInDate && checkOutDate)) {
+                checkInDate = selected;
+                checkOutDate = null;
+                document.getElementById('checkInDate').value = formatDate(selected);
+                document.getElementById('checkOutDate').value = '';
+            } else {
+                if (selected > checkInDate) {
+                    checkOutDate = selected;
+                    document.getElementById('checkOutDate').value = formatDate(selected);
+                    updateBookingSummary();
+                } else if (selected < checkInDate) {
+                    checkInDate = selected;
+                    document.getElementById('checkInDate').value = formatDate(selected);
+                } else {
+                    checkInDate = null;
+                    document.getElementById('checkInDate').value = '';
+                }
+            }
+            generateCalendar();
+        }
+
+        function formatDate(date) {
+            return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+
+        document.getElementById('prevMonth').addEventListener('click', function() {
+            calDate.setMonth(calDate.getMonth() - 1);
+            generateCalendar();
+        });
+
+        document.getElementById('nextMonth').addEventListener('click', function() {
+            calDate.setMonth(calDate.getMonth() + 1);
+            generateCalendar();
+        });
+
+        function updateBookingSummary() {
+            var nights = checkOutDate ? Math.floor((checkOutDate - checkInDate) / (1000 * 60 * 60 * 24)) : 0;
+            var nightlyRate = 350;
+            var poolAdd = document.getElementById('poolHeating').value === 'yes' ? 150 : 0;
+            var poolTotal = poolAdd * nights;
+            var total = Math.round((nightlyRate * nights + poolTotal) * 1.05);
+
+            document.getElementById('nightlyRate').textContent = '$' + nightlyRate;
+            document.getElementById('nightsCount').textContent = nights + (nights === 1 ? ' night' : ' nights');
+            document.getElementById('poolHeatingCost').textContent = poolTotal > 0 ? '$' + poolTotal : '$0';
+            document.getElementById('totalPrice').textContent = nights > 0 ? '$' + total : '$0';
+        }
+
+        document.getElementById('guestCount').addEventListener('change', updateBookingSummary);
+        document.getElementById('poolHeating').addEventListener('change', updateBookingSummary);
+
+        generateCalendar();
+
+        // ========================
+        // BOOKING SUBMIT
+        // ========================
+        document.getElementById('requestBookBtn').addEventListener('click', function() {
+            if (!checkInDate || !checkOutDate) {
+                alert('Please select both check-in and check-out dates.');
+                return;
+            }
+            var subject = 'Booking Inquiry - 388 Governors Drive';
+            var body = 'Booking Inquiry\n\n' +
+                'Check-in: ' + document.getElementById('checkInDate').value + '\n' +
+                'Check-out: ' + document.getElementById('checkOutDate').value + '\n' +
+                'Guests: ' + document.getElementById('guestCount').value + '\n' +
+                'Pool Heating: ' + document.getElementById('poolHeating').value + '\n\n' +
+                'Please contact me with pricing and availability.\n\nThank you!';
+            window.location.href = 'mailto:tommy@usawholesalesupplies.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        });
+
+        // ========================
+        // PAYMENT MODAL
+        // ========================
+        var payOverlay = document.getElementById('paymentOverlay');
+        var payModal = document.getElementById('paymentModal');
+
+        function openPaymentModal() {
+            payOverlay.classList.add('active');
+            payModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePaymentModal() {
+            payOverlay.classList.remove('active');
+            payModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('payDepositBtn').addEventListener('click', openPaymentModal);
+        payOverlay.addEventListener('click', closePaymentModal);
+        document.getElementById('paymentClose').addEventListener('click', closePaymentModal);
+        document.getElementById('paymentModalClose').addEventListener('click', closePaymentModal);
+
+        // ========================
+        // CONTACT FORM
+        // ========================
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var checkIn = document.getElementById('inquiryCheckIn').value || 'Not specified';
+            var checkOut = document.getElementById('inquiryCheckOut').value || 'Not specified';
+            var guests = document.getElementById('inquiryGuests').value || 'Not specified';
+            var message = document.getElementById('message').value;
+
+            var subject = 'New Inquiry - 388 Governors Drive';
+            var body = 'New Inquiry from ' + firstName + ' ' + lastName + '\n\n' +
+                'Contact Information:\nEmail: ' + email + '\nPhone: ' + phone + '\n\n' +
+                'Travel Details:\nCheck-in: ' + checkIn + '\nCheck-out: ' + checkOut + '\nGuests: ' + guests + '\n\n' +
+                'Message:\n' + message;
+
+            window.location.href = 'mailto:tommy@usawholesalesupplies.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('formSuccess').classList.add('show');
+        });
+
+    })();
+    </script>
+</body>
+</html>
